@@ -1,0 +1,93 @@
+.carousel-inner > .item > img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.search{
+    color: whitesmoke;
+    margin-left: 23px;
+    margin-right: 23px;
+    width: auto;
+    height: auto;
+    background-color: rgb(70, 130, 180);
+    z-index: 5;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+}
+:-moz-placeholder {
+    font-style: italic;
+}
+::-moz-placeholder {
+    font-style: italic;
+}
+:-ms-input-placeholder {
+    font-style: italic;
+}
+.tabs{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: left;
+}
+
+.icon-features1{
+    background-position-x: left;
+    background-position-y: top;
+    background-size: initial;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+}
+
+.job_content:hover {
+     background: #fdfdfd !important;
+     z-index: 5;
+     border-color: transparent;
+     box-shadow: 0 0 5px 1px #bcbcbc;
+}
+
+.job_content{
+    height: auto;
+    margin-left: 25px;
+    margin-top: 50px;
+    margin-right: 25px;
+}
+
+.job_content_div{
+    padding: 26px;
+    height: 100%;
+}
+
+.cut-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;     /* fallback */
+    max-height: 32px;      /* fallback */
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.ui-autocomplete {
+    width: 20%;
+    background: #ffffff;
+    border-radius: 1px;
+}
+
+.job_content_management_page:hover {
+    background: #fdfdfd !important;
+    z-index: 5;
+    border-color: transparent;
+    box-shadow: 0 0 5px 1px #bcbcbc;
+}
+
+.job_content_management_page{
+    height: 150px;
+}
+
