@@ -23,16 +23,28 @@ class HomeController extends Controller
         foreach ($jobs as $job) {
             $emp_id = $job->created_by;
             $company_id = CompanyProfile::where('id',$emp_id)->value('company_id');
-            $job->image = Storage::url('/companies/'.$company_id.'.png');
-            if(!$job->image){
+//            $job->image = Storage::url('/companies/'.$company_id.'.png');
+//            if(!$job->image){
+//                $job->image = Storage::url('/companies/default.png');
+//            }
+            if(Storage::exists('public/companies/'.$company_id.'.png')){
+                $job->image = Storage::url('/companies/'.$company_id.'.png');
+            }
+            else{
                 $job->image = Storage::url('/companies/default.png');
             }
         }
 
         $articles = Articles::orderBy('created_at','desc')->limit(2)->get();
         foreach ($articles as $article) {
-            $article->image = Storage::url('/articles/'.$article->id.'.png');
-            if(!$article->image){
+//            $article->image = Storage::url('/articles/'.$article->id.'.png');
+//            if(!$article->image){
+//                $article->image = Storage::url('/articles/default.png');
+//            }
+            if(Storage::exists('public/articles/'.$article->id.'.png')){
+                $article->image = Storage::url('/articles/'.$article->id.'.png');
+            }
+            else{
                 $article->image = Storage::url('/articles/default.png');
             }
         }
