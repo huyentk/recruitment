@@ -123,6 +123,7 @@
             </a>
         @endforeach
     </div>
+    <p>đ</p>
     <script>
         var urlGetJobs = '{{ route('getJobSources') }}';
     </script>
