@@ -31,7 +31,7 @@ class CompanyController extends Controller
 //        if(!$company->image)
 //            $company->image = Storage::url('/companies/default.png');
         $company->image = file_exists(public_path().'/companies/'.$id.'.png') ? Storage::url('/companies/'.$id.'.png') : Storage::url('/companies/default.png');
-        
+
         $jobs_all = [];
         $emp_ids = CompanyProfile::where('company_id',$company->id)->get();
         foreach ($emp_ids as $emp_id){
