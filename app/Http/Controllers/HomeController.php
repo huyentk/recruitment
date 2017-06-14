@@ -43,7 +43,7 @@ class HomeController extends Controller
 //            if(!$company->image){
 //                $company->image = Storage::url('/companies/default.png');
 //            }
-            if(Storage::exists('/companies/'.$company->id.'.png')){
+            if(Storage::exists('public/companies/'.$company->id.'.png')){
                 $company->image = Storage::url('/companies/'.$company->id.'.png');
             }
             else{
