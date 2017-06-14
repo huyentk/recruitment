@@ -214,6 +214,8 @@ class CompanyController extends Controller
         $company->url = $request['url'];
         $company->num_employee = $request['num_employee'];
         $company->save();
+
+        return redirect()->route('get-company-page',['id' => $company->id]);
     }
 
     public function getCompanyList(){
