@@ -53,6 +53,7 @@ class HomeController extends Controller
 
     public function getContactUs(){
         $contact = Contact::all();
+        Log::info($contact);
         return view('basic.contact')->with(['contact' => $contact]);
     }
 
