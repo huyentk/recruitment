@@ -13,8 +13,8 @@ return [
     |
     */
 
-    'default' => 'local',
-
+//    'default' => 'local',
+    'default' => 'ftp',
     /*
     |--------------------------------------------------------------------------
     | Default Cloud Filesystem Disk
@@ -42,7 +42,6 @@ return [
     */
 
     'disks' => [
-
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
@@ -63,6 +62,12 @@ return [
             'bucket' => env('AWS_BUCKET'),
         ],
 
-    ],
+        'ftp' => [
+            'driver'   => 'ftp',
+            'host'     => 'ftp://waws-prod-sn1-113.ftp.azurewebsites.windows.net',
+            'username' => 'recruitmentit\huyentk1296',
+            'password' => 'Huyen1312',
 
+        ],
+    ]
 ];
