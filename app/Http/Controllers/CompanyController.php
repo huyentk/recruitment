@@ -23,14 +23,15 @@ class CompanyController extends Controller
 {
     public function getCompanyPage($id){
         $company = Company::find($id);
-        $company->banner = Storage::url('/companies/banners/'.$id.'.png');
-        if(!$company->banner)
-            $company->banner = Storage::url('/companies/banners/default.png');
-
-        $company->image = Storage::url('/companies/'.$id.'.png');
-        if(!$company->banner)
-            $company->banner = Storage::url('/companies/default.png');
-
+//        $company->banner = Storage::url('/companies/banners/'.$id.'.png');
+//        if(!$company->banner)
+//            $company->banner = Storage::url('/companies/banners/default.png');
+        $company->banner = file_exists(public_path().'/companies/banners/'.$id.'.png') ? Storage::url('/companies/banners/'.$id.'.png') : Storage::url('/companies/banners/default.png');
+//        $company->image = Storage::url('/companies/'.$id.'.png');
+//        if(!$company->image)
+//            $company->image = Storage::url('/companies/default.png');
+        $company->image = file_exists(public_path().'/companies/'.$id.'.png') ? Storage::url('/companies/'.$id.'.png') : Storage::url('/companies/default.png');
+        
         $jobs_all = [];
         $emp_ids = CompanyProfile::where('company_id',$company->id)->get();
         foreach ($emp_ids as $emp_id){
