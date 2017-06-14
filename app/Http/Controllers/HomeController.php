@@ -39,10 +39,11 @@ class HomeController extends Controller
 
         $companies = Company::all();
         foreach ($companies as $company) {
-            $company->image = Storage::url('/companies/'.$company->id.'.png');
-            if(!$company->image){
-                $company->image = Storage::url('/companies/default.png');
-            }
+//            $company->image = Storage::url('/companies/'.$company->id.'.png');
+//            if(!$company->image){
+//                $company->image = Storage::url('/companies/default.png');
+//            }
+            $company->image = Storage::exists('/companies/'.$company->id.'.png') ? Storage::url('/companies/'.$company->id.'.png') : $company->image = Storage::url('/companies/default.png');
         }
         return view('homepage')->with([
             'jobs' => $jobs,
