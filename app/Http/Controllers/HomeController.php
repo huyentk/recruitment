@@ -56,6 +56,10 @@ class HomeController extends Controller
         return view('basic.contact')->with(['contact' => $contact]);
     }
 
+    public function getUpdateContact(){
+        $contact = Contact::find(1);
+        return view('basic.update_contact')->with(['contact' => $contact]);
+    }
     public function postUpdateContact(Request $request){
         $contact = Contact::find(1);
         $contact->phone = $request['phone'];
