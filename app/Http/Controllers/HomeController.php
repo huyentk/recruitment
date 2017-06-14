@@ -39,10 +39,6 @@ class HomeController extends Controller
 
         $companies = Company::all();
         foreach ($companies as $company) {
-//            $company->image = Storage::url('/companies/'.$company->id.'.png');
-//            if(!$company->image){
-//                $company->image = Storage::url('/companies/default.png');
-//            }
             if(Storage::exists('public/companies/'.$company->id.'.png')){
                 $company->image = Storage::url('/companies/'.$company->id.'.png');
             }
