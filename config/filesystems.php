@@ -61,11 +61,5 @@ return [
             'region' => env('AWS_REGION'),
             'bucket' => env('AWS_BUCKET'),
         ],
-
-        'dropbox' => [
-            'driver' => 'dropbox',
-            'accessToken' => 'CsKUvSQmK0AAAAAAAAAAodEb_UpEiHsS7My-2ASZmjHAjLm39YENc5UjmvRczXUM',
-            'appSecret' => '8muajnxhkfltz2o',
-        ]
     ]
 ];
