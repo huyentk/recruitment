@@ -62,12 +62,10 @@ return [
             'bucket' => env('AWS_BUCKET'),
         ],
 
-        'ftp' => [
-            'driver'   => 'ftp',
-            'host'     => 'ftps://waws-prod-sn1-113.ftp.azurewebsites.windows.net',
-            'username' => 'recruitmentit\huyentk1296',
-            'password' => 'Huyen1312',
-
-        ],
+        'dropbox' => [
+            'driver' => 'dropbox',
+            'accessToken' => 'CsKUvSQmK0AAAAAAAAAAodEb_UpEiHsS7My-2ASZmjHAjLm39YENc5UjmvRczXUM',
+            'appSecret' => '8muajnxhkfltz2o',
+        ]
     ]
 ];

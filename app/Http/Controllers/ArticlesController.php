@@ -43,7 +43,7 @@ class ArticlesController extends Controller
     {
         $article = Articles::find($id);
 //        $article->image = Storage::url('/articles/'.$article->id.'.png');
-        $article->image = Storage::disk('ftp')->exists('articles/'.$article->id.'.png');
+        $article->image = Storage::disk('dropbox')->exists('articles/'.$article->id.'.png');
 //        if(!$article->image){
 //            $article->image = Storage::url('/articles/default.png');
 //        }
@@ -68,7 +68,7 @@ class ArticlesController extends Controller
         if($request->hasFile('image_article')){
             $image = $request->file('image_article');
 //            Storage::put('/public/articles/'.$maxID.'.png', file_get_contents($image->getRealPath()));
-            Storage::disk('ftp')->put('articles/'.$maxID.'.png', file_get_contents($image->getRealPath()));
+            Storage::disk('dropbox')->put('articles/'.$maxID.'.png', file_get_contents($image->getRealPath()));
         }
         $article->save();
         $message = ['message_success'=>'Post article successfully!'];
