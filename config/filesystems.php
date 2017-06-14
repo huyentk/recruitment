@@ -64,7 +64,7 @@ return [
 
         'ftp' => [
             'driver'   => 'ftp',
-            'host'     => 'ftp://waws-prod-sn1-113.ftp.azurewebsites.windows.net',
+            'host'     => 'ftps://waws-prod-sn1-113.ftp.azurewebsites.windows.net',
             'username' => 'recruitmentit\huyentk1296',
             'password' => 'Huyen1312',
 
