@@ -43,7 +43,8 @@ class HomeController extends Controller
 //            if(!$company->image){
 //                $company->image = Storage::url('/companies/default.png');
 //            }
-            $company->image = Storage::exists('/companies/'.$company->id.'.png') ? Storage::url('/companies/'.$company->id.'.png') : $company->image = Storage::url('/companies/default.png');
+            $company->image = Storage::exists('/companies/'.$company->id.'.png');
+            Log::info($company->image);
         }
         return view('homepage')->with([
             'jobs' => $jobs,
