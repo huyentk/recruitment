@@ -15,7 +15,7 @@
             <form action="{{ route('post-update-contact') }}" method="post">
                 <div class="form-group">
                     <label for="phone">Phone:</label>
-                    <input class="form-control" type="text" name="phone" value="{{$contact->phone}}">
+                    <input class="form-control" type="text" name="phone" value="{{ $contact->phone}}">
                 </div>
                 <div class="form-group">
                     <label for="email">Email Adress</label>
