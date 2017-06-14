@@ -12,7 +12,7 @@ use App\Models\Company;
 use App\Models\CompanyProfile;
 use App\Models\Contact;
 use App\Models\Job;
-use Composer\DependencyResolver\Request;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
