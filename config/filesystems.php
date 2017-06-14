@@ -13,8 +13,8 @@ return [
     |
     */
 
-//    'default' => 'local',
-    'default' => 'ftp',
+    'default' => 'local',
+//    'default' => 'ftp',
     /*
     |--------------------------------------------------------------------------
     | Default Cloud Filesystem Disk
