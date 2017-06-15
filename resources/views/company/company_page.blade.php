@@ -10,7 +10,7 @@
 @endsection
 
 @section('content')
-    <div style="margin-bottom: -30px;max-height: 100%;overflow: hidden;">
+    <div style="margin-bottom: -30px;max-height: 100%;overflow: hidden; height: 310px; width: 1140px;">
         <img src="{{ $company->banner }}" class="img-responsive">
     </div>
     <div class="company-page-above">
