@@ -11,7 +11,7 @@
 
 @section('content')
     <div style="margin-bottom: -30px;max-height: 100%;overflow: hidden;">
-        <img src="{{ $company->banner }}" class="img-responsive" style="height: 693px; width: 1140px;">
+        <img src="{{ $company->banner }}" class="img-responsive" style="height: 690px; width: 1140px;">
     </div>
     <div class="company-page-above">
         <div class="logo-container">
