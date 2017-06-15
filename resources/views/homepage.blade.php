@@ -117,8 +117,8 @@
     <div class="row" style="padding-left: 15px;">
         @foreach($companies as $company)
             <a href="{{ route('get-company-page',['id' => $company->id]) }}">
-                <div class="col-md-2">
-                    <center><img src="{{ $company->image }}" class="img-rounded"></center>
+                <div class="col-md-2 logo">
+                    <center><img src="{{ $company->image }}" class="img-rounded img-responsive"></center>
                 </div>
             </a>
         @endforeach
