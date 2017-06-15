@@ -41,13 +41,12 @@ class HomeController extends Controller
 //            if(!$article->image){
 //                $article->image = Storage::url('/articles/default.png');
 //            }
-//            if(Storage::exists('public/articles/'.$article->id.'.png')){
-//                $article->image = Storage::url('/articles/'.$article->id.'.png');
-//            }
-//            else{
-//                $article->image = Storage::url('/articles/default.png');
-//            }
-            $article->image = Storage::url('/articles/default.png');
+            if(Storage::exists('/articles/'.$article->id.'.png')){
+                $article->image = Storage::url('/articles/'.$article->id.'.png');
+            }
+            else{
+                $article->image = Storage::url('/articles/default.png');
+            }
         }
 
         $companies = Company::all();
