@@ -157,10 +157,10 @@ class JobsController extends Controller
     }
 
     public function getCreateJob(){
-        $id = Auth::id();
+        $id = Auth::user()->id;
         $company_id = CompanyProfile::where('id',$id)->pluck('company_id');
         $company = Company::find($company_id);
-        $company->image = Storage::url('companies/'.$company->id.'.png');
+        $company->image = Storage::url('companies/'.$company_id.'.png');
         if(!$company->image)
             $company->image = Storage::url('companies/default.png');
         return view('jobs.create_job')->with([
